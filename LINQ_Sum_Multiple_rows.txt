@@ -1,0 +1,19 @@
+LINQ Sum multiple rows GroupBy
+
+(From p in dtSheet1.AsEnumerable() Group p by obj_p= New With {Key.P_Employee=p.Item("Employee").Key.P_Department=p.Item("Department")} Into MG = Group Select new with {.Employee=obj_p.P_Employee,.Department=obj_p.P_Department,.WorkingHours=MG.Sum(Function (r) Double.Parse(r.Item("WorkingHours").ToString()))}).ToList
+
+IEnumerable<Object> =
+{Employee=Smith,Department=IT,Amount=23}
+{Employee=Taylor,Department=Accounts,Amount=9}
+{Employee=Perkins ,Departmemnt=HR ,Amount=11 }
+
+strResult=Main1 + Main2
+Main1
+String.Join(",",IEnum(0).ToString.Split(","c).Select(Function (item) item.ToString.Split("="c)(0).Replace("{","").Trim))
+Main2
+String.Join(System.Environment.NewLine,IEnum.Select(Function (row) String.Join(",",row.ToString.Split(","c).Select(Function (item) item.ToString.Split("="c)(1).Replace("}","").Trim.ToString))))
+
+Generate DataTable: strResult. Output: dtSheet2
+
+(Double.Parse(str1)-Double.Parse(str2)).ToString
+
